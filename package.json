@@ -1,0 +1,21 @@
+{
+  "name": "data_incubator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blockchain.info": "^2.11.0",
+    "chart.js": "^2.7.2",
+    "express": "^4.16.3",
+    "gdax": "^0.7.0",
+    "gdax-trading-toolkit": "^0.3.1",
+    "moment": "^2.22.1",
+    "path": "^0.12.7",
+    "python-shell": "^0.5.0"
+  }
+}

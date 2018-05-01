@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Incubator</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="backgroundOne">
+    <div class='backgroundOneCover'>
+      <h1 id="titleOne">The Data Incubator Challenge</h1>
+      <h2 id="titleTwo">Fundamental and Technical Analysis of Crypto Assets</h2>
+      <h3 id="titleThree">Andrew Apicello</h3>
+
+    </div>
+  </div>
+  <div class="container buttons center">
+    <br><br>
+    <h1 class="text-center">Technical Analysis of Crypto Currencies</h1>
+    <br><br>
+  </div>
+  <div class="container">
+   <div class="text-center col-sm-6">
+    <p class="text-center">Crypto Asset Selector:</p>
+    <br>
+    <button class="btn btn-primary" onclick= "serveBitcoin()">Bitcoin</button>
+    <button class="btn btn-primary" onclick= "serveLitecoin()">Litecoin</button>
+    <button class="btn btn-primary" onclick= "serveEthereum()">Ethereum</button>
+    <br><br>
+  </div>
+  <div class="slidecontainer col-sm-6">
+    <p class="text-center">Simple Moving Average Lookback Period (Days):</p>
+    <input id="slider" type="range" min="1" max="100" value="50" class="slider">
+    <div style="display: none;" id='demo'>50</div>
+    <br>
+    <input id="slider2" type="range" min="1" max="100" value="25" class="slider">
+    <div style="display: none;" id='demo2'>25</div>
+    <br><br>
+  </div>
+</div>
+
+
+<div class="container">
+  <canvas id="myChart" width="400" height="200"></canvas>
+  <script src="mychart.js"></script>
+  <br><br>
+  <p>Technical analysis assists with the timing of buys and sells for cryptocurrencies. Due to the volatility of these class of assets, many hedge funds have taken positions in bitcoin and explored the use of trading algorithms. Here, a dynamic tool is presented to illustrate how a mean reversion algorithm could profit from marketplace fluctuations. With a "buy" order when the 25 day simple moving average goes above the 50 day simple moving average in October, and a "sell" order when the 25 day moving average goes below the 50 day moving average in January, an actor would have a return on investment of 260% in just four months. While these returns are unlikely to continue indefinitely, I am interested in furthering my investigation into trading techniques.</p>
+
+  <p>API Used: https://docs.gdax.com/</p>
+  <br><br><br>
+</div>
+
+
+<div class='container'>
+
+  <h1 class='text-center'>Fundamental Analysis of Bitcoin</h1>
+
+  <div class="slidecontainer col-sm-12">
+    <div class="col-sm-6">
+      <p class="text-center">Hash Rate Weight:</p>
+      <input id="slider3" type="range" min="0" max="10" value="1" class="slider">
+      <div style="display: none;" id='demo3'>1</div>
+      <br>
+    </div>
+    <div class="col-sm-6">
+      <p class="text-center">Potential Market Size Coefficient:</p>
+      <input id="slider4" type="range" min="0" max="10" value="1" class="slider">
+      <div style="display: none;"  id='demo4'>1</div>
+      <br>
+    </div>
+  </div>
+
+  <canvas id="statisticsChart1" width="400" height="200"></canvas>
+  <br><br>
+
+  <p>The big question when it comes to crypto assets is how to do a fundamental analysis. What is the value of the underlying asset? Having initially been thought of as a seurity (the SEC still thinks it is), development of this branch of finance has been slow, while the development and adoption of the technology has been widespread. An enormous gap has opened in the crypto-finance space, and my initial work has been an effort to reconcile this.</p>
+
+  <p>To use Bitcoin as an example, it is a nascent currency. As such, any fundamental analysis should use the tools of currency valuation. The formula for this is: MV = PT, where money supply multiplied by its velocity equals the price level multiplied by the transaction volume. A model is presented including this calculation, and has attempted to include additional factors, like the hash rate. As profit driven miners attach more computers to the network, the hashrate increases. If there is insight present in this group, then a leading indicator of price may exist within this community and manifest as a relationship between long term price and hashrate.</p>
+  </p>
+  <p>I would like to expand, test, and optimize the model I have presented here. A combination of blockchain data including mining pool distribution, blocktime, unique addresses, and transfer volume all contain rich datasets which have yet to be fully understood. I would like to better comprehend machine learning and modelling through your institution and bring this knowledge to bring a more mature financial perspective to this growing industry.</p>
+  <p>API Used: https://blockchain.info/api</p>
+
+
+  <script src="statisticscharts.js"></script>
+
+
+
+
+</body>
+</html>
